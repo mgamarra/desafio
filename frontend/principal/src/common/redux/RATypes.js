@@ -1,0 +1,19 @@
+//REDUX ACTION TYPES
+
+//COMMON
+export const ASYNC_START = 'ASYNC_START';
+export const ASYNC_END = 'ASYNC_END';
+export const CLEAR_REDUCER_INFO = 'CLEAR_REDUCER_INFO';
+export const ADD_NOTIFICATION = 'ADD_NOTIFICATION';
+export const REMOVE_NOTIFICATION = 'REMOVE_NOTIFICATION';
+
+//AUTH
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+
+//Users
+export const CREATE_USER = 'REGISTER_NEW_USER';
+export const FETCH_ALL_USERS = 'FETCH_ALL_USERS';
+
+//Address
+export const FETCH_ADDRESS_BY_ZIPCODE  = 'FETCH_ADDRESS_BY_ZIPCODE';

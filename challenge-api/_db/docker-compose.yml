@@ -1,0 +1,19 @@
+version: "3.1"
+
+services:
+  postgres:
+    restart: always
+    container_name: challenge_pg
+    image: postgres:10.6
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PORT=5432
+    expose:
+      - 5432
+    ports:
+      - "5432:5432"

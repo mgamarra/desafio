@@ -1,0 +1,55 @@
+app:
+  name: ChallengeApp
+  version: 1.0
+
+spring:
+  application:
+    name: ChallengeREST
+
+  messages:
+    basename: i18n/messages
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+    favicon:
+      enabled: false
+
+  profiles:
+    active: @activeProfile@
+
+  thymeleaf:
+    mode: HTML
+    enabled: false
+
+security:
+  basic:
+    enabled: true
+    user:
+      name: test
+      password: test
+
+server:
+  port: @serverPort@
+  servlet:
+    context-path: /
+  session:
+    cookie:
+      http-only: true
+  compression:
+    enabled: true
+    mime-types: application/json,application/json;charset=UTF-8,application/javascript,text/plain,text/css,text/html,text/xml,image/jpeg,image/png,image/gif,image/svg
+
+jwt:
+  header: Authorization
+  expires_in: 3600000 # 1hr
+  secret: thisIsASuperSecretTokenFromASickMind,Talkey?
+
+logging:
+  path: /var/log/appname
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace
