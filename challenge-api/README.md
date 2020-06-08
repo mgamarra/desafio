@@ -23,7 +23,7 @@ To run with docker you must:
 1. Setup [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) and [docker compose](https://docs.docker.com/compose/install/)
 2. Go to `_db` and run `docker-compose up -d`
 3. This will checkout the postgres docker image version 10.6 and create users: `challenge`, both with same password
-4. A initial DB `chllange` will be created too 
+4. A initial DB `challenge` will be created too 
 3. Your PG will be running on `localhost:5432`
 4. Migrate you DB to current version ...
 
