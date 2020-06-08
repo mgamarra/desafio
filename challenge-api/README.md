@@ -3,8 +3,7 @@ CHALLENGE API
 
 This is a multi-module Spring Boot + React + Undertow Maven project. 
 
-
-1. `backend`: This contains Java code of the application, `core` module containing business rules, etc, that's used by `batch` and `rest` backend modules;  
+1. `backend`: This contains Java code of the application, `core` module containing business rules, etc, that's used by `rest` backend modules;  
 3.  `_docs`: This contains documents about the project
 4.  `_db`: This contains initial data to init the devel db, dockerized
 
@@ -23,8 +22,8 @@ To run with docker you must:
 
 1. Setup [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) and [docker compose](https://docs.docker.com/compose/install/)
 2. Go to `_db` and run `docker-compose up -d`
-3. This will checkout the postgres docker image version 10.6 and create users: `postgres` and `appname`, both with same password
-4. A initial DB `appname` will be created too 
+3. This will checkout the postgres docker image version 10.6 and create users: `challenge`, both with same password
+4. A initial DB `chllange` will be created too 
 3. Your PG will be running on `localhost:5432`
 4. Migrate you DB to current version ...
 
@@ -41,7 +40,7 @@ $  ./mvnw flyway:clean flyway:migrate
 ```
 
 2. Migrations will be located on `backend/core/src/main/resources/db/migration`
-3. Migrations will look like `V[n]__Description`. E.g: `V1_Create_Basic_Tables`
+3. Migrations will look like `V[n]__Description`. E.g: `V1__Creating_Basic_Tables`
 4. Migrations will be applied and you app is ready to go up
 
 ## Building the application
@@ -54,7 +53,7 @@ You can build the package as a single artifact by running the `./mvnw clean pack
 Next, you can run the application by executing:
 
 ```bash
-$ java -jar backend/core/target/appname-core-0.1.0-SNAPSHOT.jar
+$ java -jar backend/core/target/challenge-core-0.1.0-SNAPSHOT.jar
 ```
 
 The application will be accessible at `http://localhost:8080`.
